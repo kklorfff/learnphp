@@ -1,41 +1,18 @@
 <?php
-$array = array(1, 2, 3);
 
-var_dump($array);
+$num = 1;
 
-$array = array(1, 2, 3);
-var_dump($array);
-
-$array = [
-    'Hello',
-    true,
-    [1, 2, 3],
-    3.4,
-];
-var_dump($array);
-
-$array = [
-    'name' => 'Kirill',
-    'age' => '18',
-];
-
-var_dump($array);
-
-$array = [
-    1,
-    true,
-    'name' => 'Kirill',
-    'age' => '18',
-    100 => 4,
-    5,
-    6.3,
-    NULL,
-];
-
-var_dump($array);
-$array = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-];
-var_dump($array[2][1]);
+$num = $num + 1;
+$num = $num - 1;
+$num = $num * 2;
+$num = $num / 2;
+$num = 14;
+$num = $num % 4;
+$num = $num **2;
+var_dump($num);
+$num += 1;
+$num -= 1;
+$num /= 2;
+$num *= 2;
+$num %= 2;
+$num **= 2;
