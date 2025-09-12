@@ -23,6 +23,24 @@ class MetalBox extends Box {
     }
 }
 
+class Cat {
+    use Colorful;
+}
+
+trait Colorful {
+    public $color;
+    public function setColor($color){   
+        $this->color = $color;
+    }
+}
+
+trait Smelly {
+    public $smell;
+    public function setSmell($smell){
+        $this->color = $smell;
+    }
+}
+
 $metalBox1 = new MetalBox();
 $metalBox1->width = 'a lot';
 // $metalBox1->test();
