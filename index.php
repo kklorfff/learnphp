@@ -1,51 +1,49 @@
-<?php 
+<?php
 
-else {
-    var_dump('smaller');
+function hello() {
+    var_dump('hello');
 }
 
-$day = date('w' , strtotime('12.0.2025'));
+hello();
+hello();
+hello();
+hello();
 
-var_dump($dayy == 1) {
-
-if ($day == 1)
-    var_dump('Esmaspäev');
-} elseif ($i == 2){
-    var_dump('Teispäev');
-} elseif ($i == 3){
-    var_dump('Kolmapäev');
-} elseif ($i == 4){
-    var_dump('Neljapäev');
-} elseif ($i == 5){
-    var_dump('Reede');
-} elseif ($i == 6){
-    var_dump('Laupäev');
-} else {
-    var_dump('Pühapäev');
+function helloName($name) {
+    var_dump("Hello $name");
 }
 
-switch($day) {
-    case 1:
-        var_dump('Esmaspäev');
-        break;
-    case 2:
-        var_dump('Teisipäev');
-        break;
-    case 3:
-        var_dump('Kolmapäev');
-        break;
-    case 4
-        var_dump('Neljapäev');
-        break;
-    case 5
-        var_dump('Esmaspäev');
-        break
-    case 6
-        var_dump('Pidupäev'); 
-        break;
-    case 7
-        var_dump('Pühapäev');
-        break;
-    default:
-    var_dump('Imelik päev');
+helloName('Kirill');
+helloName('Potapov');
+helloname();
+
+function sum($a, $b) {
+    return $a+$b; 
 }
+
+var_dump(sum(1, 4));
+$answer = sum(6, 5);
+
+function biggerThanTen($n) {
+    if($n > 10) {
+        return 'Bigger';
+    }
+    return 'Smaller';  
+    var_dump('asdasdad');//never runs   
+}
+
+var_dump(biggerThanTen(11));
+var_dump(biggerThanTen(4));
+
+function anything(...$args){
+    var_dump($args);
+}
+anything(1, 2, 3, 4, 5);//many times as u want
+
+function recursive($n){
+    if($n<10){
+        var_dump($n);
+        recursive($n+1);
+    }
+} 
+recursive(0);
