@@ -1,9 +1,6 @@
-<?php
-if ($i > 10){
-    var_dump('bigger');
-} elseif ($i == 10){
-    var_dump('equals');
-} else {
+<?php 
+
+else {
     var_dump('smaller');
 }
 
