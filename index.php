@@ -1,21 +1,36 @@
 <?php
 
 class Box {
-   public $width;
-   protected $height;
-   private $length;
+    private $width;
+    public $height;
+    public $lenght;
 
-   public function volume(){
-        return $this->width * $this-> height * $this->length;
+    use Colorful, Smelly;
+
+    public function setWidth($width) {
+        if(is_numeric($width) && $width > 0){
+            $this->width = $width;
+        } else {
+            throw new Exception('You are an idiot');
+        }
+        
+    }
+
+    public function getWidth(){
+        return $this->width;
+    }
+
+    public function volume(){
+        return $this->width * $this->height * $this->lenght;
     }
 }
 
 class MetalBox extends Box {
-    public $material = 'Metal';
+    public $material = 'Metal🤘';
     public $weightPerUnit = 2;
 
-    public function test (){
-        var_dump($this->length);
+    public function test(){
+        var_dump($this->lenght);
     }
 
     public function mass() {
@@ -29,23 +44,24 @@ class Cat {
 
 trait Colorful {
     public $color;
-    public function setColor($color){   
+    public function setColor($color) {
         $this->color = $color;
     }
 }
 
 trait Smelly {
     public $smell;
-    public function setSmell($smell){
-        $this->color = $smell;
+    public function setSmell($smell) {
+        $this->smell = $smell;
     }
 }
 
 $metalBox1 = new MetalBox();
-$metalBox1->width = 'a lot';
-// $metalBox1->test();
+$metalBox1->setWidth(32);
+//$metalBox1->test();
+var_dump($metalBox1->getWidth());
 $metalBox1->height = 20;
-$metalBox1->length = 30;
+$metalBox1->lenght = 30;
 
 var_dump($metalBox1->volume());
 var_dump($metalBox1);
