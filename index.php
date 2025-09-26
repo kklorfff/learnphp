@@ -1,3 +1,10 @@
+<?php $posts = [
+  ['title' => 'World news 1', 'published' => '26.09.25', 'author' => 'Kirill', 'body' => 'Some World news 1'],
+  ['title' => 'World news 2', 'published' => '26.09.25', 'author' => 'Bogdan', 'body' => 'Some World news 2'],
+  ['title' => 'World news 3', 'published' => '26.09.25', 'author' => 'Miron', 'body' => 'Some World news 3'],
+  ['title' => 'World news 4', 'published' => '26.09.25', 'author' => 'Mark', 'body' => 'Some World news 4'],
+];
+?>
 <?php include __DIR__. '/partials/header.php'; ?>
 
 

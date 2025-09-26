@@ -98,3 +98,5 @@
     </style>
   </head>
   <body>
+    <?php include __DIR__. '/themeselect.php'; ?>
+    <?php include __DIR__. '/navbar.php'; ?>
